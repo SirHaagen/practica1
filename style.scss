@@ -1,0 +1,11 @@
+.container{
+  &__card{
+    width: 250px;
+    &--logoclose{
+      width: 100%;
+      img{
+        width: 90%;
+      }
+    }
+  }
+}
