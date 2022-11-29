@@ -1,3 +1,6 @@
+.container {
+  background-color: black;
+}
 .container__card {
   width: 250px;
 }
