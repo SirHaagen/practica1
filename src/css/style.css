@@ -13,8 +13,10 @@
   align-items: center;
 }
 .container__card--logoclose img {
-  width: 90%;
+  width: 80%;
 }
 .container__card--content-logoopen {
   width: 250px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
