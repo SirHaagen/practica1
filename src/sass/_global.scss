@@ -1,0 +1,10 @@
+
+@use 'fonts' as *;  //porque "_fonts.scss está en el mismo nivel
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: $font-poppins;
+}
