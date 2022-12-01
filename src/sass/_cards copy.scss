@@ -1,5 +1,5 @@
 .container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -7,14 +7,13 @@
 
   &__card {
     cursor: pointer;
-    overflow: hidden;
 
     &-main {
       width: 250px;
       height: 250px;
       background-color: #ff0000;
       color: #ffffff;
-      padding: 15px;
+      padding: 10px;
       position: relative;
       border-radius: 50%;
       transition: 0.5s;
@@ -34,26 +33,29 @@
         transition: 0.5s;
       }
 
-      &--open{
+      &--left{
         height: 0;
+        width: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        &_logoopen{
-          transform: translateX(20px);
-        }
       }
-      &--open,
-      &--open>* {
+      &--left,
+      &--left>* {
         opacity: 0;
         overflow: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
       }
 
     }
 
-    &.display &-main {
+    &.open &-main {
       width: 80vw;
       height: 95vh;
       border-radius: 10px;
@@ -69,21 +71,20 @@
         transform: rotate(360deg);
       }
 
-      &--open {
+      &--left {
         width: 100%;
         height: 100%;
+        height: auto;
         opacity: 1;
         overflow: visible;
 
         &_info {
           height: 100%;
+          padding: 10px;
           opacity: 1;
           overflow: visible;
+          left: 3%;
           transition: 0.5s 1s;
-
-          &--text{
-            font-size: 0.8em;
-          }
 
           &--button {
             padding: 5px 10px;
@@ -96,31 +97,18 @@
         }
 
         &_logoopen {
-          width: 50vw;
-          height: 100%;
-          transform: translateX(0);
+          width: 200px;
           opacity: 1;
           overflow: visible;
+          top: 250vw;
           transition: 0.5s 1.3s cubic-bezier(0,-0.54,0.5,2);
         }
       }
 
       @media screen and (min-width: 600px) {
 
-        &--open{
+        &--left{
           flex-direction: row;
-
-          &_info{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-
-            &--text{
-              align-items: center;
-              font-size: 1em;
-            }
-          }
         }
         
       }
